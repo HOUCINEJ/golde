@@ -1,0 +1,165 @@
+body {
+    font-family: 'Tajawal', Arial, sans-serif;
+    background: #111;
+    color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    display: block;
+}
+.container {
+    position: relative;
+    z-index: 1;
+}
+.access-modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(255,0,0,0.25);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+.access-modal-content {
+    background: rgba(60,0,0,0.85);
+    padding: 32px 24px 24px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    text-align: center;
+    min-width: 260px;
+    max-width: 90vw;
+}
+.access-modal-content h2 {
+    color: #fff;
+    margin-bottom: 18px;
+    font-size: 1.3em;
+}
+.access-modal-content input[type="password"] {
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    font-size: 1em;
+    width: 80%;
+    margin-bottom: 14px;
+    background: rgba(255,255,255,0.16);
+    color: #fff;
+    text-align: center;
+}
+.access-modal-content button {
+    padding: 8px 22px;
+    border-radius: 7px;
+    border: none;
+    background: #ff3333;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+.access-error {
+    color: #ffd6d6;
+    font-size: 1em;
+    min-height: 1.5em;
+    margin-top: 6px;
+}
+@media (max-width: 600px) {
+    .access-modal-content {
+        padding: 18px 4vw 18px 4vw;
+        min-width: 0;
+    }
+}
+
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    background: rgba(40, 40, 40, 0.75);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    padding: 20px;
+}
+h1, h2 {
+    text-align: center;
+    color: #f8f9fa;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #fff;
+    background: rgba(30,30,30,0.95);
+}
+button[type="submit"] {
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button[type="submit"]:hover {
+    background: #0056b3;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #fafafa;
+}
+th, td {
+    padding: 8px 4px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    color: #111;
+    background: #fff;
+}
+th {
+    background: #f1f3f4;
+    color: #444;
+}
+.edit-btn, .save-btn, .cancel-btn, .delete-btn {
+    padding: 4px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95em;
+}
+.edit-btn { background: #ffc107; color: #222; }
+.save-btn { background: #28a745; color: #fff; }
+.cancel-btn { background: #dc3545; color: #fff; }
+.delete-btn { background: #b30000; color: #fff; }
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 8px;
+    }
+    table, thead, tbody, th, td, tr {
+        font-size: 0.95em;
+    }
+}

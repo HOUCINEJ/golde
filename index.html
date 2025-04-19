@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المستخدمين</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div id="access-modal" class="access-modal">
+        <div class="access-modal-content">
+            <h2>يرجى إدخال رمز الدخول</h2>
+            <input type="password" id="access-code-input" placeholder="رمز الدخول" autofocus>
+            <button id="access-submit">دخول</button>
+            <div id="access-error" class="access-error"></div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>إضافة مستخدم جديد</h1>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="accountName">اسم الحساب</label>
+                <input type="text" id="accountName" required>
+            </div>
+            <div class="form-group">
+                <label for="bankCode">رمز البنك</label>
+                <input type="text" id="bankCode" required>
+            </div>
+            <div class="form-group">
+                <label for="playerStatus">حالة اللاعب</label>
+                <input type="text" id="playerStatus" required>
+            </div>
+            <button type="submit">إضافة</button>
+        </form>
+        <h2>قائمة المستخدمين</h2>
+        <table id="usersTable">
+            <thead>
+                <tr>
+                    <th>الكود</th>
+                    <th>اسم الحساب</th>
+                    <th>رمز البنك</th>
+                    <th>حالة اللاعب</th>
+                    <th>تعديل</th>
+                    <th>حذف</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- سيتم إضافة الصفوف هنا -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
